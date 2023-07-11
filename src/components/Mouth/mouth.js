@@ -1,4 +1,4 @@
-import styles from "mouth.css";
+import styles from "./mouth.css";
 
 const Mouth = ({img}) => {
     return(
