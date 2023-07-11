@@ -75,76 +75,291 @@ const App = () => {
     switch (selectedAccessory) {
       case "Background":
         switch (name) {
-          case "Blue50":
+          case "Blue 50":
             return setBackgroundIndex(0);
-          case "Blue60":
+          case "Blue 60":
             return setBackgroundIndex(1);
-          case "Blue70":
+          case "Blue 70":
             return setBackgroundIndex(2);
-          case "DarkBlue30":
+          case "Dark Blue 30":
             return setBackgroundIndex(3);
-          case "DarkBlue50":
+          case "Dark Blue 50":
             return setBackgroundIndex(4);
-          case "DarkBlue70":
+          case "Dark Blue 70":
             return setBackgroundIndex(5);
-          case "Green50":
+          case "Green 50":
             return setBackgroundIndex(6);
-          case "Green60":
+          case "Green 60":
             return setBackgroundIndex(7);
-          case "Green70":
+          case "Green 70":
             return setBackgroundIndex(8);
-          case "Grey40":
+          case "Grey 40":
             return setBackgroundIndex(9);
-          case "Grey70":
+          case "Grey 70":
             return setBackgroundIndex(10);
-          case "Grey80":
+          case "Grey 80":
             return setBackgroundIndex(11);
-          case "Red50":
+          case "Red 50":
             return setBackgroundIndex(12);
-          case "Red60":
+          case "Red 60":
             return setBackgroundIndex(13);
-          case "Red70":
+          case "Red 70":
             return setBackgroundIndex(14);
-          case "Yellow50":
+          case "Yellow 50":
             return setBackgroundIndex(15);
-          case "Yellow60":
+          case "Yellow 60":
             return setBackgroundIndex(16);
-          case "Yellow70":
+          case "Yellow 70":
             return setBackgroundIndex(17);
           default:
             return setBackgroundIndex(0)
         }
-        case "Ears":
-          switch (name) {
-            case "Default":
-              return setEarsIndex(0);
-              case "TiltBackward":
-                return setEarsIndex(1);
-                case "TiltForward":
-                  return setEarsIndex(2);
-                  default:
-                    return setEarsIndex(0);
-          }
-          case "Accessories":
-            switch (name) {
-              case "Earings":
-                return setAccessoryIndex(0);
-                case "Flower":
-                  return setAccessoryIndex(1);
-                  case "Glasses":
-                    return setAccessoryIndex(2);
-                    case "Headphone":
-                      return setAccessoryIndex(3);
-                      default:
-                        return setAccessoryIndex(0);
-            }
-            case "Eyes"
+      case "Ears":
+        switch (name) {
+          case "Default":
+            return setEarsIndex(0);
+          case "Tilt Backward":
+            return setEarsIndex(1);
+          case "Tilt Forward":
+            return setEarsIndex(2);
+          default:
+            return setEarsIndex(0);
+        }
+      case "Accessories":
+        switch (name) {
+          case "Earings":
+            return setAccessoryIndex(0);
+          case "Flower":
+            return setAccessoryIndex(1);
+          case "Glasses":
+            return setAccessoryIndex(2);
+          case "Headphone":
+            return setAccessoryIndex(3);
+          default:
+            return setAccessoryIndex(0);
+        }
+      case "Eyes":
+        switch (name) {
+          case "Default":
+            return setEyesIndex(0);
+          case "Angry":
+            return setEyesIndex(1);
+          case "Naughty":
+            return setEyesIndex(2);
+          case "Panda":
+            return setEyesIndex(3);
+          case "Smart":
+            return setEyesIndex(4);
+          case "Star":
+            return setEyesIndex(5);
+          default:
+            return setEyesIndex(0);
+        }
+      case "Hair":
+        switch (name) {
+          case "Default":
+            return setHairIndex(0);
+          case "Bang":
+            return setHairIndex(1);
+          case "Curls":
+            return setHairIndex(2);
+          case "Elegant":
+            return setHairIndex(3);
+          case "Fancy":
+            return setHairIndex(4);
+          case "Quiff":
+            return setHairIndex(5);
+          case "Short":
+            return setHairIndex(6);
+          default:
+            return setHairIndex(0);
+        }
+      case "Leg":
+        switch (name) {
+          case "Default":
+            return setLegIndex(0);
+          case "Bubble ":
+            return setLegIndex(1);
+          case "Cookie":
+            return setLegIndex(2);
+          case "Game Console":
+            return setLegIndex(3);
+          case "Tilt Backward":
+            return setLegIndex(4);
+          case "Tilt Forward":
+            return setLegIndex(5);
+          default:
+            return setLegIndex(0);
+        }
+      case "Mouth":
+        switch (name) {
+          case "Default":
+            return setMouthIndex(0);
+          case "Astonished":
+            return setMouthIndex(1);
+          case "Eating":
+            return setMouthIndex(2);
+          case "Laugh":
+            return setMouthIndex(3);
+          case "Tongue":
+            return setMouthIndex(4);
+          default:
+            return setMouthIndex(0);
+        }
+      case "Neck":
+        switch (name) {
+          case "Default":
+            return setNeckIndex(0);
+          case "Thick":
+            return setNeckIndex(1);
+          case "Bend Forward":
+            return setNeckIndex(2);
+          case "Bend Backward":
+            return setNeckIndex(3);
+          default:
+            return setNeckIndex(0);
+        }
+      default:
+        return null;
+    }
+
+  }
+
+  const setStyle = () => {
+    switch (selectedAccessory) {
+      case "Background":
+        return backgrounds;
+      case "Accessories":
+        return accessories;
+      case "Ears":
+        return ears;
+      case "Eyes":
+        return eyes;
+      case "Hair":
+        return hair;
+      case "Leg":
+        return leg;
+      case "Mouth":
+        return mouth;
+      case "Neck":
+        return neck;
+      default:
+        return null;
+
     }
   }
+  const downloadImage = () => {
+    mergeImages([
+      backgrounds[backgroundIndex].img,
+      ears[earsIndex].img,
+      eyes[eyesIndex].img,
+      neck[neckIndex].img,
+      mouth[mouthIndex].img,
+      nose,
+      hair[hairIndex].img,
+      leg[legIndex].img,
+      accessories[accessoryIndex].img
+    ])
+      .then(b64 => {
+        saveAs(b64, "Alpaca.png");
+      });
+  }
+  return (
+
+    <div className={styles.container}>
+      <section>
+        <h1 className={styles.heading}>ALPACA GENERATOR</h1>
+      </section>
+      <section className={styles.grid_col}>
+        <div className={styles.grid_row_2}>
+          <div className={`${styles.row} ${styles.relative}`}>
+            <Background img={backgrounds[backgroundIndex].img} />
+            <Ears img={ears[earsIndex].img} />
+            <Neck img={neck[neckIndex].img} />
+            <Leg img={leg[legIndex].img} />
+            <Nose />
+            <Hair img={hair[hairIndex].img} />
+            <Accessories img={accessories[accessoryIndex].img} />
+            <Eyes img={eyes[eyesIndex].img} />
+            <Mouth img={mouth[mouthIndex].img} />
+          </div>
+          <div className={styles.grid_col}>
+            <FlatButton icon="ð" text="Random" onClick={randomize} />
+            <FlatButton icon="ð¼ï¸" text="Download" onClick={downloadImage} />
+          </div>
+        </div>
+        <div className={`${styles.column} ${styles.margin_left}`}>
+          <div className={styles.column}>
+            <h3 className={styles.heading_h3}>ACCESSORIZE THE ALPACA'S</h3>
+            <div className={`${styles.column} ${styles.margin_botton}`}>
+              <div className={styles.grid_col_3}>
+                <RoundButton name="Hair" active={selectedAccessory}
+                  onClick={e => {
+                    setStyle();
+                    selectAccessoriesButton(e)
+                  }} />
+                <RoundButton name="Ears" active={selectedAccessory}
+                  onClick={e => {
+                    setStyle();
+                    selectAccessoriesButton(e)
+                  }} />
+                <RoundButton name="Eyes" active={selectedAccessory}
+                  onClick={e => {
+                    setStyle();
+                    selectAccessoriesButton(e)
+                  }} />
+              </div>
+              <div className={styles.grid_col_3}>
+                <RoundButton name="Mouth" active={selectedAccessory}
+                  onClick={e => {
+                    setStyle();
+                    selectAccessoriesButton(e)
+                  }} />
+                <RoundButton name="Neck" active={selectedAccessory}
+                  onClick={e => {
+                    setStyle();
+                    selectAccessoriesButton(e)
+                  }} />
+                <RoundButton name="Leg" active={selectedAccessory}
+                  onClick={e => {
+                    setStyle();
+                    selectAccessoriesButton(e)
+                  }} />
+              </div>
+              <div className={styles.grid_col_2}>
+                <RoundButton name="Accessories" active={selectedAccessory}
+                  onClick={e => {
+                    setStyle();
+                    selectAccessoriesButton(e)
+                  }} />
+                <RoundButton name="Background" active={selectedAccessory}
+                  onClick={e => {
+                    setStyle();
+                    selectAccessoriesButton(e)
+                  }} />
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 className={styles.heading_h3}>STYLE</h3>
+            <div className={styles.grid_col_3_auto_row}>
+              {
+                setStyle() && setStyle().map((item, index) => (
+                  <RoundButton key={index} name={item.name} active={selectedStyle}
+                    onClick={() => selectStylesButton(item.name)} />
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  )
 
 }
 
-
+export default App;
 
 
 // import logo from './logo.svg';
