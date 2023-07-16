@@ -1,39 +1,39 @@
 
-import styles from "./App.css";
-import FlatButton from "./components/FlatButton/flatbutton.js";
-import RoundButton from "./components/RoundButton/roundbutton.js";
 
-import Background from "./components/Background/background.js";
-import { backgrounds } from "./data/backgrounds.js";
+import FlatButton from "./components/FlatButton/flatbutton.jsx";
+import RoundButton from "./components/RoundButton/roundbutton.jsx";
 
-import Neck from "./components/Neck/neck.js";
-import { neck } from "./data/neck.js"
+import Background from "./components/Background/background.jsx";
+import { backgrounds } from "./data/backgrounds.jsx";
 
-import Ears from "./components/Ears/ears.js";
-import { ears } from "./data/ears.js"
+import Neck from "./components/Neck/neck.jsx";
+import { neck } from "./data/neck.jsx"
 
-import Eyes from "./components/Eyes/eyes.js";
-import { eyes } from "./data/eyes.js";
+import Ears from "./components/Ears/ears.jsx";
+import { ears } from "./data/ears.jsx"
 
-import Hair from "./components/Hair/hair.js";
-import { hair } from "./data/hair.js";
+import Eyes from "./components/Eyes/eyes.jsx";
+import { eyes } from "./data/eyes.jsx";
 
-import Leg from "./components/Leg/leg.js"
-import { leg } from "./data/leg.js"
+import Hair from "./components/Hair/hair.jsx";
+import { hair } from "./data/hair.jsx";
 
-import Accessories from "./components/Accessories/accessories.js";
-import { accessories } from "./data/accessories.js";
+import Leg from "./components/Leg/leg.jsx"
+import { leg } from "./data/leg.jsx"
 
-import Nose from "./components/Nose/nose.js";
-import { nose } from "./data/nose.js";
+import Accessories from "./components/Accessories/accessories.jsx";
+import { accessories } from "./data/accessories.jsx";
 
-import Mouth from "./components/Mouth/mouth.js";
-import { mouth } from "./data/mouth.js"
+import Nose from "./components/Nose/nose.jsx";
+import { nose } from "./data/nose.jsx";
+
+import Mouth from "./components/Mouth/mouth.jsx";
+import { mouth } from "./data/mouth.jsx"
 
 import { useState } from "react";
 import mergeImages from "merge-images";
 import { saveAs } from "file-saver";
-
+import styles from "./App.css";
 
 const App = () => {
 
