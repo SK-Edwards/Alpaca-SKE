@@ -4,31 +4,31 @@ import FlatButton from "./components/FlatButton/flatbutton.jsx";
 import RoundButton from "./components/RoundButton/roundbutton.jsx";
 
 import Background from "./components/Background/background.jsx";
-import { backgrounds } from "./data/backgrounds.jsx";
+import { backgrounds } from "./data/backgrounds.js";
 
 import Neck from "./components/Neck/neck.jsx";
-import { neck } from "./data/neck.jsx"
+import { neck } from "./data/neck.js"
 
 import Ears from "./components/Ears/ears.jsx";
-import { ears } from "./data/ears.jsx"
+import { ears } from "./data/ears.js"
 
 import Eyes from "./components/Eyes/eyes.jsx";
-import { eyes } from "./data/eyes.jsx";
+import { eyes } from "./data/eyes.js";
 
 import Hair from "./components/Hair/hair.jsx";
-import { hair } from "./data/hair.jsx";
+import { hair } from "./data/hair.js";
 
 import Leg from "./components/Leg/leg.jsx"
-import { leg } from "./data/leg.jsx"
+import { leg } from "./data/leg.js"
 
 import Accessories from "./components/Accessories/accessories.jsx";
-import { accessories } from "./data/accessories.jsx";
+import { accessories } from "./data/accessories.js";
 
 import Nose from "./components/Nose/nose.jsx";
-import { nose } from "./data/nose.jsx";
+import { nose } from "./data/nose.js";
 
 import Mouth from "./components/Mouth/mouth.jsx";
-import { mouth } from "./data/mouth.jsx"
+import { mouth } from "./data/mouth.js"
 
 import { useState } from "react";
 import mergeImages from "merge-images";
@@ -254,13 +254,15 @@ const App = () => {
     mergeImages([
       backgrounds[backgroundIndex].img,
       ears[earsIndex].img,
-      eyes[eyesIndex].img,
       neck[neckIndex].img,
-      mouth[mouthIndex].img,
+      leg[legIndex].img,
       nose,
       hair[hairIndex].img,
-      leg[legIndex].img,
-      accessories[accessoryIndex].img
+      accessories[accessoryIndex].img,
+      eyes[eyesIndex].img,
+      mouth[mouthIndex].img,
+
+
     ])
       .then(b64 => {
         saveAs(b64, "Alpaca.png");

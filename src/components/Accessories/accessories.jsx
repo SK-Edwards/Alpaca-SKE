@@ -2,7 +2,7 @@ import styles from "./accessories.module.css"
 
 const Accessories = ({img}) => {
     return (
-        <img className={styles.absulute} src={img} alt="accssories"/>
+        <img className={styles.absolute} src={img} alt="accssories"/>
     )
 }
 

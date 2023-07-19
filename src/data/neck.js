@@ -6,8 +6,8 @@ import thick from "../assets/neck/thick.png";
 
 export const neck = [
 
-    {img: bendBackward, name: "BendBackward"},
-    {img: bendForward, name: "BendForward"},
+    {img: bendBackward, name: "Bend Backward"},
+    {img: bendForward, name: "Bend Forward"},
     {img: deFault, name: "Default"},
     {img: thick, name: "Thick"}
 ];

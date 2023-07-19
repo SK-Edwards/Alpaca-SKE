@@ -20,23 +20,23 @@ import yellow70 from "../assets/backgrounds/yellow70.png";
 
 export const backgrounds = [
 
-    { img: blue50, name: 'Blue50' },
-    { img: blue60, name: 'Blue60' },
-    { img: blue70, name: 'Blue70' },
-    { img: darkBlue30, name: 'DarkBlue30' },
-    { img: darkBlue50, name: 'DarkBlue50' },
-    { img: darkBlue70, name: 'DarkBlue70' },
-    { img: green50, name: 'Green50' },
-    { img: green60, name: 'Green60' },
-    { img: green70, name: 'Green70' },
-    { img: grey40, name: 'Grey40' },
-    { img: grey70, name: 'Grey70' },
-    { img: grey80, name: 'Grey80' },
-    { img: red50, name: 'Red50' },
-    { img: red60, name: 'Red60' },
-    { img: red70, name: 'Red70' },
-    { img: yellow50, name: 'Yellow50' },
-    { img: yellow60, name: 'Yellow60' },
-    { img: yellow70, name: 'Yellow70' }
+    { img: blue50, name: 'Blue 50' },
+    { img: blue60, name: 'Blue 60' },
+    { img: blue70, name: 'Blue 70' },
+    { img: darkBlue30, name: 'Dark Blue 30' },
+    { img: darkBlue50, name: 'Dark Blue 50' },
+    { img: darkBlue70, name: 'Dark Blue 70' },
+    { img: green50, name: 'Green 50' },
+    { img: green60, name: 'Green 60' },
+    { img: green70, name: 'Green 70' },
+    { img: grey40, name: 'Grey 40' },
+    { img: grey70, name: 'Grey 70' },
+    { img: grey80, name: 'Grey 80' },
+    { img: red50, name: 'Red 50' },
+    { img: red60, name: 'Red 60' },
+    { img: red70, name: 'Red 70' },
+    { img: yellow50, name: 'Yellow 50' },
+    { img: yellow60, name: 'Yellow 60' },
+    { img: yellow70, name: 'Yellow 70' }
 
 ];

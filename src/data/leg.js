@@ -8,10 +8,10 @@ import tiltForward from "../assets/leg/tilt-forward.png";
 
 export const leg = [
 
-    {img: bubbleTea, name: 'BubbleTea'},
+    {img: bubbleTea, name: 'Bubble Tea'},
     {img: cookie, name: 'Cookie'},
     {img: deFault, name: 'Default'},
-    {img: gameConsole, name: 'GameConsole'},
-    {img: tiltBackward, name: 'TiltBackward'},
-    {img: tiltForward, name: 'TiltForward'}
+    {img: gameConsole, name: 'Game Console'},
+    {img: tiltBackward, name: 'Tilt Backward'},
+    {img: tiltForward, name: 'Tilt Forward'}
 ];

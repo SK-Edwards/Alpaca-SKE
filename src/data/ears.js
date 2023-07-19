@@ -4,6 +4,6 @@ import deFault from "../assets/ears/default.png";
 
 export const ears =  [
     {img: deFault, name: "Default"},
-    {img: tiltBackward, name: "TiltBackward"},
-    {img: tiltForward, name: "TiltForward"}
+    {img: tiltBackward, name: "Tilt Backward"},
+    {img: tiltForward, name: "Tilt Forward"}
 ];
