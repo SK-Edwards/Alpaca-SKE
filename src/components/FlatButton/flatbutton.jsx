@@ -1,4 +1,4 @@
-import styles from "./flatbutton.css";
+import styles from "./flatbutton.module.css";
 
 const FlatButton = ({icon, text, onClick}) => {
     return(

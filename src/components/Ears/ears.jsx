@@ -1,4 +1,4 @@
-import styles from "./ears.css"
+import styles from "./ears.module.css"
 
 const Ears = ({img}) => {
     return(

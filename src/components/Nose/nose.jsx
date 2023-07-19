@@ -1,10 +1,10 @@
-import styles from "./nose.css";
+import styles from "./nose.module.css";
+import nose from "../../assets/nose.png"
 
-
-const Nose = ({img}) => {
+const Nose = () => {
     return (
 
-        <img className={styles.absolute} src={img} alt="nose" />
+        <img className={styles.absolute} src={nose} alt="nose" />
     )
 };
 

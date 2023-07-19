@@ -1,4 +1,4 @@
-import styles from "./leg.css";
+import styles from "./leg.module.css";
 
 const Leg = ({img}) => {
     return(

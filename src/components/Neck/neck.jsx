@@ -1,4 +1,4 @@
-import styles from "./neck.css";
+import styles from "./neck.module.css";
 
 const Neck = ({img}) => {
     return(

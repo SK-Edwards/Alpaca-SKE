@@ -1,4 +1,4 @@
-import styles from "./eyes.css";
+import styles from "./eyes.module.css";
 
 const Eyes = ({img}) => {
 return(

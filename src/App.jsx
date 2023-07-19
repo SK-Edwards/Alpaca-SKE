@@ -33,7 +33,9 @@ import { mouth } from "./data/mouth.jsx"
 import { useState } from "react";
 import mergeImages from "merge-images";
 import { saveAs } from "file-saver";
-import styles from "./App.css";
+import styles from "./App.module.css";
+
+
 
 const App = () => {
 

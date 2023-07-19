@@ -1,5 +1,5 @@
 
-import styles from "./roundbutton.css";
+import styles from "./roundbutton.module.css";
 
 const RoundButton = ({name, active, onClick}) => {
     return(

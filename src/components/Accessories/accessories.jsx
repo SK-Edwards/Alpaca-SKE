@@ -1,4 +1,4 @@
-import styles from "./accessories.css"
+import styles from "./accessories.module.css"
 
 const Accessories = ({img}) => {
     return (

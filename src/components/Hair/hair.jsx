@@ -1,4 +1,4 @@
-import styles from "./hair.css";
+import styles from "./hair.module.css";
 
 const Hair = ({img}) => {
     return(
