@@ -9,17 +9,22 @@
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    border: 2px solid firebrick;
+    border-radius: 10px;
+    padding: 15px;
 }
 
 .heading{
     color: #001534;
     margin: 0;
+    text-align: center;
 }
 
 .heading_h3{
     color: #001534;
     margin-bottom: 1rem;
     margin-top: 0;
+    text-align: center;
 }
 
 section {

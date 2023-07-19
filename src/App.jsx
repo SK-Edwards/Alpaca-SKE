@@ -288,8 +288,8 @@ const App = () => {
             <Mouth img={mouth[mouthIndex].img} />
           </div>
           <div className={styles.grid_col}>
-            <FlatButton icon="ð" text="Random" onClick={randomize} />
-            <FlatButton icon="ð¼ï¸" text="Download" onClick={downloadImage} />
+            <FlatButton icon="" text="Random" onClick={randomize} />
+            <FlatButton icon="" text="Download" onClick={downloadImage} />
           </div>
         </div>
         <div className={`${styles.column} ${styles.margin_left}`}>
