@@ -42,6 +42,7 @@ const App = () => {
   const [backgroundIndex, setBackgroundIndex] = useState(0);
   const [accessoryIndex, setAccessoryIndex] = useState(0)
   const [earsIndex, setEarsIndex] = useState(0)
+  const [noseIndex, setNoseIndex] = useState(0);
   const [hairIndex, setHairIndex] = useState(0)
   const [eyesIndex, setEyesIndex] = useState(0)
   const [mouthIndex, setMouthIndex] = useState(0)
@@ -51,10 +52,10 @@ const App = () => {
   const [selectedStyle, setSelectedStyle] = useState(null)
 
 
-  const randomize = () => {
+  const Randomize = () => {
     setBackgroundIndex(Math.floor(Math.random() * backgrounds.length));
     setAccessoryIndex(Math.floor(Math.random() * accessories.length));
-    setEarsIndex(Math.floor(Math.random() * ears.lenght));
+    setEarsIndex(Math.floor(Math.random() * ears.length));
     setHairIndex(Math.floor(Math.random() * hair.length));
     setEyesIndex(Math.floor(Math.random() * eyes.length));
     setMouthIndex(Math.floor(Math.random() * mouth.length));
@@ -250,13 +251,13 @@ const App = () => {
 
     }
   }
-  const downloadImage = () => {
+ const downloadImage = () => {
     mergeImages([
       backgrounds[backgroundIndex].img,
       ears[earsIndex].img,
       neck[neckIndex].img,
       leg[legIndex].img,
-      nose,
+      nose[noseIndex].img,
       hair[hairIndex].img,
       accessories[accessoryIndex].img,
       eyes[eyesIndex].img,
@@ -288,7 +289,7 @@ const App = () => {
             <Mouth img={mouth[mouthIndex].img} />
           </div>
           <div className={styles.grid_col}>
-            <FlatButton icon="" text="Random" onClick={randomize} />
+            <FlatButton icon="" text="Random" onClick={Randomize} />
             <FlatButton icon="" text="Download" onClick={downloadImage} />
           </div>
         </div>
